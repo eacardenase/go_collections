@@ -8,12 +8,17 @@ func main() {
 
 	bookNames[3] = "Cibola Burn"
 
-	featuredBooks := bookNames[1:3]
+	// featuredBooks := bookNames[:3]
+	featuredBooks := bookNames[1:]
+	highlightedPrices := featuredBooks[:1]
 
 	fmt.Println(prices)
 	fmt.Println(bookNames)
 
 	fmt.Println(prices[2])
+	// fmt.Println(prices[1:5]) // index out of bounds
+	fmt.Println(prices[1:4])
 
 	fmt.Println(featuredBooks)
+	fmt.Println(highlightedPrices)
 }
