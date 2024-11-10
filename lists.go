@@ -8,8 +8,12 @@ func main() {
 
 	bookNames[3] = "Cibola Burn"
 
+	featuredBooks := bookNames[1:3]
+
 	fmt.Println(prices)
 	fmt.Println(bookNames)
 
 	fmt.Println(prices[2])
+
+	fmt.Println(featuredBooks)
 }
