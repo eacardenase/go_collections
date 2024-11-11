@@ -10,7 +10,10 @@ func main() {
 
 	// featuredBooks := bookNames[:3]
 	featuredBooks := bookNames[1:]
-	highlightedPrices := featuredBooks[:1]
+
+	featuredBooks[0] = "The Final Empire" // modifies the original array
+
+	highlightedBooks := featuredBooks[:1]
 
 	fmt.Println(prices)
 	fmt.Println(bookNames)
@@ -20,5 +23,18 @@ func main() {
 	fmt.Println(prices[1:4])
 
 	fmt.Println(featuredBooks)
-	fmt.Println(highlightedPrices)
+	fmt.Println(highlightedBooks) // [The Final Empire]
+	fmt.Println(highlightedBooks[0])
+	// fmt.Println(highlightedBooks[1]) // runtime error, although not at compile time
+
+	fmt.Println("Book names", len(bookNames), cap(bookNames))                   // 4 4
+	fmt.Println("Featured books", len(featuredBooks), cap(featuredBooks))       // 3 3
+	fmt.Println("Featured books", len(highlightedBooks), cap(highlightedBooks)) // 1 3
+
+	// highlightedBooks = highlightedBooks[0:] // runtime error
+	highlightedBooks = highlightedBooks[:3]
+
+	fmt.Println(highlightedBooks)                                               // [The Final Empire The Three Body Problem Cibola Burn]
+	fmt.Println(highlightedBooks[1])                                            // The Three Body Problem
+	fmt.Println("Featured books", len(highlightedBooks), cap(highlightedBooks)) // 3 3
 }
