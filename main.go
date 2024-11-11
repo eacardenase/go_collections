@@ -39,4 +39,16 @@ func main() {
 
 	// fmt.Println(courseRatings)
 	courseRatings.output()
+
+	// for i := 0; i < len(userNames); i++ {
+	// 	fmt.Println(i, userNames[i])
+	// }
+
+	for index, value := range userNames {
+		fmt.Println(index, value)
+	}
+
+	for key, value := range courseRatings {
+		fmt.Printf("The %v course has a rating of %v\n", key, value)
+	}
 }
