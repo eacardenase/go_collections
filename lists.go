@@ -55,4 +55,10 @@ func main() {
 
 	fmt.Println("Prices", prices)
 	fmt.Println(len(prices), cap(prices)) // 6 8
+
+	discountPrices := []float64{101.99, 80.99, 20.59}
+
+	prices = append(prices, discountPrices...)
+
+	fmt.Println("Prices", prices)
 }
