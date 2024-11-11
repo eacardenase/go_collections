@@ -47,7 +47,12 @@ func main() {
 	fmt.Println("Prices", prices)
 	fmt.Println(len(prices), cap(prices)) // 4 4
 
+	// prices[4] = 4.99 // index out of range
+
 	prices = append(prices, 5.99, 12.99)
 
+	prices[4] = 4.99 // works, because a new array was created and replaced the old one
+
 	fmt.Println("Prices", prices)
+	fmt.Println(len(prices), cap(prices)) // 6 8
 }
