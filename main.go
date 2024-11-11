@@ -19,4 +19,17 @@ func main() {
 	fmt.Println(userNames)
 
 	fmt.Println(len(userNames), cap(userNames)) // 4 5
+
+	// courseRatings := map[string]float64{}
+	courseRatings := make(map[string]float64, 3)
+
+	// no need for memory reallocation
+	courseRatings["go"] = 4.7
+	courseRatings["react"] = 4.8
+	courseRatings["node"] = 4.8
+
+	// requires memory reallocation
+	courseRatings["angular"] = 4.7
+
+	fmt.Println(courseRatings)
 }
